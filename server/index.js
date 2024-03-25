@@ -19,24 +19,24 @@
 
 
   //----------------AZURE DATABASE CONNECTION------------------//
-  // const connection = mysql.createConnection({
-  //   host: process.env.DB_HOST,
-  //   user: process.env.DB_USER,
-  //   password: process.env.DB_PASSWORD,
-  //   database: process.env.DB_DATABASE,
-  //   port: process.env.DB_PORT,
-  //   ssl: {
-  //     ca: fs.readFileSync(process.env.DB_SSL_CA_PATH),
-  //   },
-  // });
+  const connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    port: process.env.DB_PORT,
+    ssl: {
+      ca: fs.readFileSync(process.env.DB_SSL_CA_PATH),
+    },
+  });
   
 //----------------LOCAL DATABASE CONNECTION------------------//
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "@123Abcd",
-  database: "chat",
-  port: "3306"
+// const connection = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "@123Abcd",
+//   database: "chat",
+//   port: "3306"
 });
 //----------------------------------------------------------//
 
